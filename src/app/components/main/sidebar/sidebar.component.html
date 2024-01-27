@@ -1,0 +1,56 @@
+<mat-drawer-container class = "example-container" style = "height: 100% !important;">
+    <mat-drawer mode ="side" [opened]="sidebarOpened" style="width: 250px;">
+       <mat-nav-list>
+            <mat-list-item routerLink="Home">
+                 <mat-icon>home</mat-icon><span>Home</span>
+             </mat-list-item>
+            <mat-expansion-panel [class.mat-elevation-z0]="true">
+                 <mat-expansion-panel-header>
+                 <mat-icon>menu</mat-icon> Shop by Department
+                 </mat-expansion-panel-header>
+        <mat-nav-list>
+        <a mat-list-item routerLink="Electronics">
+            <mat-icon>laptop</mat-icon><span> Electronics</span>
+        </a>
+        <a mat-list-item routerLink="petsproduct">
+            <mat-icon>pets</mat-icon><span> Pet Supplies</span>
+        </a>
+        <a mat-list-item routerLink="vehicles">
+            <mat-icon>motorcycle</mat-icon><span> Vehicles</span>
+        </a>
+        <a mat-list-item routerLink="healthproducts">
+            <mat-icon>local_hospital</mat-icon><span> Health Supplies</span>
+        </a>
+        <a mat-list-item routerLink="schoolproducts">
+            <mat-icon>school</mat-icon><span> School Supplies</span>
+        </a>
+        <a mat-list-item routerLink="garden">
+            <mat-icon>local_florist</mat-icon><span> Garden Supplies</span>
+        </a>
+    </mat-nav-list>
+    </mat-expansion-panel>
+    <mat-list-item>
+        <mat-icon></mat-icon><span> Shops</span>
+    </mat-list-item>
+
+    <mat-list-item routerLink="language">
+        <mat-icon>language</mat-icon><span> Language</span>
+    </mat-list-item>
+
+       <mat-list-item routerLink="Person"><span>Person</span>
+    </mat-list-item>
+    <mat-list-item routerLink="Product"><span>Product</span>
+    </mat-list-item>
+    
+</mat-nav-list>
+
+
+
+</mat-drawer>
+
+<mat-drawer-content>
+    <div class="container-fluid" style="height: 100% !important; padding-top: 12px;">
+        <ng-content></ng-content>
+    </div>
+</mat-drawer-content>
+</mat-drawer-container>
